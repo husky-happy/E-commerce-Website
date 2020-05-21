@@ -192,7 +192,7 @@ $(function () {
         // 获取各个区块滚动到的距离
         for (var i = 0; i < $content_blocks.length; i++) {
             var $content_blocks_offsetTop = $content_blocks.eq(i).offset().top;
-            if ($documentScrollTop >= $content_blocks_offsetTop - 43) {
+            if ($documentScrollTop >= $content_blocks_offsetTop - 120) {
                 $('.sidebar_blocks > div').eq(i).css({
                     "background-color": "#ff5500",
                     "color": "#fff"
@@ -222,7 +222,6 @@ $(function () {
     var $head_nav_offset = $('.head_nav');
     var $head_nav_top = $head_nav_offset.offset().top;
     $(document).on('scroll', function () {
-        // console.log($('.head-nav').scrollTop())
         var $documentScrollTop = $(document).scrollTop();
         if($documentScrollTop > $head_nav_top) {
             $head_nav_offset.css({
@@ -231,7 +230,7 @@ $(function () {
                 "z-index": 999,
                 "border-bottom": "2px solid #ff5500"
             });
-            $head_nav_offset.animate({"top": 0},500)
+            $head_nav_offset.animate({"top": 0},0)
         } else {
             $head_nav_offset.css({
                 "position" : "relative",

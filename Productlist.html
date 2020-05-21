@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>π特网</title>
+    <link rel="stylesheet" href="css/Productlist.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="js/jquery-1.12.1.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/Productlist.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="location">
+                <a href="#" onclick="javascript:return false;"><img src="images/icon_location.png" alt="">杭州市</a>
+                <div class="location_extension">
+                    <p>请选择你的收货地址</p>
+                    <ul>
+                        <li class="province">省份</li>
+                        <li class="city location_current">城市</li>
+                    </ul>
+                    <div class="city_select">
+                        <a href="#" onclick="javascript:return false;" class="city_current">杭州市</a>
+                        <a href="#" onclick="javascript:return false;">宁波市</a>
+                        <a href="#" onclick="javascript:return false;">温州市</a>
+                        <a href="#" onclick="javascript:return false;">绍兴市</a>
+                        <a href="#" onclick="javascript:return false;">台州市</a>
+                        <a href="#" onclick="javascript:return false;">金华市</a>
+                        <a href="#" onclick="javascript:return false;">衢州市</a>
+                        <a href="#" onclick="javascript:return false;">湖州市</a>
+                        <a href="#" onclick="javascript:return false;">嘉兴市</a>
+                        <a href="#" onclick="javascript:return false;">舟山市</a>
+                        <a href="#" onclick="javascript:return false;">丽水市</a>
+                    </div>
+                    <div class="province_select">
+                        <a href="#" onclick="javascript:return false;">北京市</a>
+                        <a href="#" onclick="javascript:return false;">天津市</a>
+                        <a href="#" onclick="javascript:return false;">河北省</a>
+                        <a href="#" onclick="javascript:return false;">辽宁省</a>
+                        <a href="#" onclick="javascript:return false;">吉林省</a>
+                        <a href="#" onclick="javascript:return false;">黑龙江</a>
+                        <a href="#" onclick="javascript:return false;">山东省</a>
+                        <a href="#" onclick="javascript:return false;">江苏省</a>
+                        <a href="#" onclick="javascript:return false;">上海市</a>
+                        <a href="#" onclick="javascript:return false;" class="province_current">浙江省</a>
+                        <a href="#" onclick="javascript:return false;">安徽省</a>
+                        <a href="#" onclick="javascript:return false;">福建省</a>
+                        <a href="#" onclick="javascript:return false;">江西省</a>
+                        <a href="#" onclick="javascript:return false;">广东省</a>
+                        <a href="#" onclick="javascript:return false;">广西壮...</a>
+                        <a href="#" onclick="javascript:return false;">海南省</a>
+                        <a href="#" onclick="javascript:return false;">河南省</a>
+                        <a href="#" onclick="javascript:return false;">湖南省</a>
+                        <a href="#" onclick="javascript:return false;">湖北省</a>
+                        <a href="#" onclick="javascript:return false;">山西省</a>
+                        <a href="#" onclick="javascript:return false;">内蒙古...</a>
+                        <a href="#" onclick="javascript:return false;">宁夏回...</a>
+                        <a href="#" onclick="javascript:return false;">青海省</a>
+                        <a href="#" onclick="javascript:return false;">陕西省</a>
+                        <a href="#" onclick="javascript:return false;">甘肃省</a>
+                        <a href="#" onclick="javascript:return false;">新疆维...</a>
+                        <a href="#" onclick="javascript:return false;">四川省</a>
+                        <a href="#" onclick="javascript:return false;">贵州省</a>
+                        <a href="#" onclick="javascript:return false;">云南省</a>
+                        <a href="#" onclick="javascript:return false;">重庆市</a>
+                        <a href="#" onclick="javascript:return false;">西藏自...</a>
+                    </div>
+                    <span class="location_close">×</span>
+                </div>
+            </div>
+            <!-- 导航栏 -->
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="javascript:return false;" id="login">亲，请登录</a></li>
+                    <li><a href="#" onclick="javascript:return false;">免费注册</a></li>
+                    <li><a href="#" onclick="javascript:return false;">我的订单</a></li>
+                    <li><a href="#" onclick="javascript:return false;">联系客服</a></li>
+                    <li><a href="#" onclick="javascript:return false;">售后服务</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- 广告 -->
+    <div id="head_adv">
+        <img src="images/adv.png" alt="">
+    </div>
+    <!-- 导航 搜索-->
+    <section class="top">
+        <div class="head_top">
+            <div class="container">
+                <div id="logo">
+                    <a href="#" onclick="javascript:return false;"><img src="images/logo.png" alt=""></a>
+                    <span class="logo_discription">最棒的宠物商城</span>
+                </div>
+                <form>
+                    <input type="text" placeholder="请输入您想搜索的商品" id="search_text">
+                    <input type="button" value="搜素" id="search">
+                </form>
+                <div id="cart" class="cart"><a href="#" onclick="javascript:return false;"><img src="images/cart.png"
+                            alt=""> 购物车</a></div>
+            </div>
+        </div>
+        <nav class="head_nav">
+            <div class="nav_box">
+                <div class="container">
+                    <nav class="nav_bar">
+                        <ul>
+                            <li class="li_class">
+                                <a href="#" onclick="javascript:return false;" class="a_class">商品分类</a>
+                                <ul class="nav_second">
+                                    <li class="li_nav_second">
+                                        <a href="#" onclick="javascript:return false;" class="nav_third_a">宠物种类</a>
+                                        <ul class="nav_third">
+                                            <li>
+                                                <span>狗狗</span>
+                                                <ul>
+                                                    <li><a href="#" onclick="javascript:return false;">博美</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">金毛</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">拉布拉多</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">德国牧羊犬</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">哈士奇</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">阿拉斯加</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">萨摩</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">贵宾</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">柴犬</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">牧羊犬</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">吉娃娃</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">巴哥</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">雪纳瑞</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">沙皮</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span>猫咪</span>
+                                                <ul>
+                                                    <li><a href="#" onclick="javascript:return false;">波斯猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">布偶猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">短毛猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">缅甸猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">短尾猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">挪威森林猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">索马里猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">加菲猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">折耳猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">暹罗猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">新加坡猫</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span>其他</span>
+                                                <ul>
+                                                    <li>
+                                                    <li><a href="#" onclick="javascript:return false;">土拨鼠</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">仓鼠</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">龙猫</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">松鼠</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">鹦鹉</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">金鱼</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">白兔</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">雪貂</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">乌龟</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">蝴蝶</a></li>
+                                                    <li><a href="#" onclick="javascript:return false;">甲虫</a></li>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_nav_second">
+                                <a href="#" onclick="javascript:return false;" class="nav_third_a">宠物食品</a>
+                                <ul class="nav_third">
+                                    <li>
+                                        <span>主食</span>
+                                        <ul>
+                                            <li><a href="#" onclick="javascript:return false;">肉干</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">肉条</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">香肠</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">羊蹄</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">犬王粮</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">猫混粮</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">蔬菜棒</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">罐头</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">炒鲜包</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span>零食</span>
+                                        <ul>
+                                            <li><a href="#" onclick="javascript:return false;">洁齿</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">咬胶</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">奶酪</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">布丁</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">果冻</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">羊蹄</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">猫草</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">饼干</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">磨牙棒</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_nav_second">
+                                <a href="#" onclick="javascript:return false;" class="nav_third_a">宠物护理</a>
+                                <ul class="nav_third">
+                                    <li>
+                                        <span>宠物工具</span>
+                                        <ul>
+                                            <li><a href="#" onclick="javascript:return false;">美毛</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">护毛</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">除臭</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">防脱毛</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">牵引带</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">美白</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">驱虫药</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">宠物窝</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">宠物碗</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span>宠物玩具</span>
+                                        <ul>
+                                            <li><a href="#" onclick="javascript:return false;">磨牙玩具</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">益智玩具</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">互动玩具</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">啃咬玩具</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">趣味玩具</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">训练玩具</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="li_nav_second">
+                                <a href="#" onclick="javascript:return false;" class="nav_third_a">宠物衣服</a>
+                                <ul class="nav_third">
+                                    <li>
+                                        <span>用品款式</span>
+                                        <ul>
+                                            <li><a href="#" onclick="javascript:return false;">背心</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">四脚衣</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">连衣裙</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">棉衣</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">毛衣</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">情侣装</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">半身裙</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">背带</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">雨衣</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">斗篷</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">唐装</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">西装</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">和服</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">婚纱礼服</a></li>
+                                            <li><a href="#" onclick="javascript:return false;">羽绒衣</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="#" onclick="javascript:return false;">限时特惠</a></li>
+                        <li><a href="#" onclick="javascript:return false;">最近新宠</a></li>
+                        <li><a href="#" onclick="javascript:return false;">宠物用品</a></li>
+                        <li><a href="#" onclick="javascript:return false;">宠物训练</a></li>
+                        <li><a href="#" onclick="javascript:return false;">宠物医疗</a></li>
+                        <li><a href="#" onclick="javascript:return false;">宠物潮装</a></li>
+                        <li><a href="#" onclick="javascript:return false;">宠物寄养</a></li>
+                        <li class="nav_bar_more">
+                            <a href="#" onclick="javascript:return false;" class="head_nav_more">更多</a>
+                            <ul class="nav_bar_more_ul">
+                                <li><a href="#" onclick="javascript:return false;">清洗</a></li>
+                                <li><a href="#" onclick="javascript:return false;">体检</a></li>
+                                <li><a href="#" onclick="javascript:return false;">杀虫</a></li>
+                                <li><a href="#" onclick="javascript:return false;">美容</a></li>
+                                <li><a href="#" onclick="javascript:return false;">安葬</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="content_full">
+        <div class="host_location">
+            全部结果 >
+        </div>
+        <div class="class_item">
+            <div class="item_class_group item_class_group_top">
+                <div class="item_class_name">
+                    <span>品牌：</span>
+                </div>
+                <div class="item_class_selected">
+                    <span>Hoopet/华元宠具</span>
+                    <span>hipidog/嬉皮狗</span>
+                    <span>PETWISH/宠愿</span>
+                    <span>YOKEN/怡亲</span>
+                    <span>雪貂留香</span>
+                    <span>HELLOJOY</span>
+                    <span>疯狂的小狗</span>
+                    <span>4legs</span>
+                    <span>狗博士工匠</span>
+                    <span>enoug/逸诺</span>
+                    <span>CBBPET</span>
+                    <span>昕源</span>
+                    <span>Mr．dog/狗先生</span>
+                    <span>派可为</span>
+                    <span>宠博士</span>
+                </div>
+            </div>
+            <div class="item_class_group">
+                <div class="item_class_name">
+                    <span>适用尺码：</span>
+                </div>
+                <div class="item_class_selected">
+                    <span>M-中型</span>
+                    <span>L-大型</span>
+                    <span>S-小型</span>
+                    <span>XL-超大型</span>
+                    <span>XS-超小型</span>
+                    <span>XXL</span>
+                    <span>M</span>
+                    <span>4legs</span>
+                </div>
+            </div>
+            <div class="item_class_group">
+                <div class="item_class_name">
+                    <span>功能：</span>
+                </div>
+                <div class="item_class_selected">
+                    <span>美毛/护毛</span>
+                    <span>杀螨除菌</span>
+                    <span>除臭</span>
+                    <span>环境除臭</span>
+                    <span>美白</span>
+                    <span>除蚤灭虱</span>
+                    <span>防脱毛</span>
+                    <span>消炎止痒</span>
+                    <span>驱蚊虫</span>
+                    <span>身体除臭(含口腔)</span>
+                </div>
+            </div>
+            <div class="item_class_group">
+                <div class="item_class_name">
+                    <span>筛选条件：</span>
+                </div>
+                <div class="item_class_selected">
+                    <span>材质 </span>
+                    <span>香味 </span>
+                    <span>相关分类 </span>
+                </div>
+            </div>
+        </div>
+        <div class="similar">
+            <div class="item_class_name">
+                <span>您是不是想找：</span>
+            </div>
+            <div class="item_class_selected">
+                <span>猫咪用品</span>
+                <span>狗狗用品</span>
+                <span>防护用品</span>
+                <span>小佩宠物用品旗舰店</span>
+                <span>车载用品</span>
+                <span>仓鼠用品</span>
+            </div>
+        </div>
+        <div class="item_list">
+            <div class="item_list_tool">
+                <ul>
+                    <li>
+                        <a href="#" onclick="javascript:return false;">综合排序</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="javascript:return false;">销量</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="javascript:return false;">信用</a>
+                    </li>
+                    <li class="price_sequence">
+                        <a href="#" onclick="javascript:return false;">价格</a>
+                        <ul class="price_sequence_ul">
+                            <li><a href="#" onclick="javascript:return false;">价格从低到高</a></li>
+                            <li><a href="#" onclick="javascript:return false;">价格从高到低</a></li>
+                            <li><a href="#" onclick="javascript:return false;">总价从低到高</a></li>
+                            <li><a href="#" onclick="javascript:return false;">总价从高到低</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="javascript:return false;">发货地</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item_container">
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/1-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥15.90
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>5.0万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>狗狗尿垫尿片宠物用品吸水垫除臭泰迪尿不湿加厚100片包邮尿布</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>波奇网旗舰店</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/1-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥39.90
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>2.0万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物狗狗沐浴露雪貂泰迪金毛比熊猫咪专用杀菌除</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>华元宠物用品专营店</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/1-3.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥39.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>3123人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>猫玩具电动逗猫球自动智能球小猫玩具自嗨可充电</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>wei你痴狂</span>
+                            <span class="store_position">浙江 金华</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/1-4.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥29.80
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>1.0万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物狗狗沐浴露洗澡用品杀螨除菌除臭止痒泰迪比</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>笑宠旗舰店</span>
+                            <span class="store_position">山东 临沂</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/1-5.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥23.80
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>1.0万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>狗盆狗碗猫碗双碗自动饮水食盆狗狗碗猫咪水碗防</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>华元宠物用品专营店</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/2-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥29.80
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>5500+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物干洗粉狗狗猫咪免洗香波杀菌除臭止痒幼犬兔</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>笑宠旗舰店</span>
+                            <span class="store_position">山东 临沂</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/2-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥15.80
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>1.0万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>狗窝夏天凉窝四季通用泰迪凉席窝狗狗垫子猫窝夏</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>嬉皮狗宠物用品专营店</span>
+                            <span class="store_position"></span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/2-3.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥22.80
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>1634人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物吸水毛巾大号洗猫咪速干猫沐浴泰迪狗金毛大</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>形酷旗舰店</span>
+                            <span class="store_position">江苏 南京</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/2-4.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥39.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>290人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span> 狗玩具耐咬大型犬金毛拉布拉多狗狗刷牙益智幼犬</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>形酷旗舰店</span>
+                            <span class="store_position">江苏 南京</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/2-5.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥158.00
+                            </span>
+                            <div class="item_show_num">
+                                <span>502人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>yu东方森草狗狗沐浴露猫咪杀菌除臭比熊专用白毛宠物</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>天猫超市</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/3-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥39.00
+                            </span>
+                            <div class="item_show_num">
+                                <span>258人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>猫咪饮水机自动喂水器狗狗喝水猫水碗循环活水不插电</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>天猫超市</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/3-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥49.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>58人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>狗狗厕所上大号拉屎金毛便盆冲水神器自动大型犬</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>艾米宠物食品专营店</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/3-3.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥58.00
+                            </span>
+                            <div class="item_show_num">
+                                <span>1134人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>逸诺PH7狗狗沐浴露洗澡专用金毛拉布拉多杀菌除臭止痒</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span天猫超市</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/3-4.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥79.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>181人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>QZee美国Zeedog狗狗牵引绳小中大型犬用品金毛</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>高质工作</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/3-5.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥24.80
+                            </span>
+                            <div class="item_show_num">
+                                <span>9人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>LaRoo莱诺宠物狗发声玩具耐咬磨牙金毛幼犬中小型犬训</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>一只全球狗</span>
+                            <span class="store_position">浙江 杭州</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/4-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥49.90
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>61人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>梅花脚狗狗发声玩具金毛宠物用品耐咬大型犬大狗</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>mewajump梅花脚旗舰店</span>
+                            <span class="store_position"></span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/4-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥28.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>20人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>漏食球狗狗玩具不倒翁漏食益智智力狗玩具解闷神</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>艾米宠物食品专营店</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/4-3.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥16.20
+                            </span>
+                            <div class="item_show_num">
+                                <span>392人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>驱虫项圈除蚤虱子狗狗泰迪体外除螨猫咪防跳蚤药猫圈颈</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>天猫超市</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/4-4.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥31.50
+                            </span>
+                            <div class="item_show_num">
+                                <span>1384人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>sos猫咪沐浴露宠物成幼猫香波猫洗澡液英短杀菌除螨专</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>天猫超市</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/4-5.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥63.20
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>2人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>QZee美国Zeedog法兰西狗狗猫咪项圈宠物领结牵</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>高质工作</span>
+                            <span class="store_position">上海</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/5-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥138.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>7人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>猫狗宠物洗澡用品沐浴露yu东方森草1022抑菌除臭</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>scoreligh</span>
+                            <span class="store_position">广东 深圳</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/5-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥14.88
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>402人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>胡萝卜兔子 宠物碗狗碗猫碗猫盆小狗狗碗猫食盆陶</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>小青龙lisa</span>
+                            <span class="store_position">浙江 杭州</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/5-3.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥58.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>9人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物饮水器狗狗饮水猫喝水神器用品不插电自动喂</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>mewajump梅花脚旗舰店</span>
+                            <span class="store_position"></span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/5-4.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥49.00
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>2人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>美亚4.5星推荐 雪尼尔宠物毛巾狗狗猫咪洗澡用品</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>hellopm</span>
+                            <span class="store_position">广西 南宁</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/5-5.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥16.50
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>5人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物除毛器一毛打尽宠物毛发吸毛去毛沙发地毯刷</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>scoreligh</span>
+                            <span class="store_position">广东 深圳</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_row">
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/6-1.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥12.50
+                            </span>
+                            <div class="item_show_num">
+                                <span>20人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>宠物专用 湿巾美容清洁用品狗狗猫咪泰迪擦脚擦眼睛擦</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>hellopm</span>
+                            <span class="store_position">广西 南宁</span>
+                        </div>
+                    </div>
+                    <div class="item_show_info">
+                        <div  class="item_show_img">
+                            <img src="images/product/6-2.png" alt="">
+                        </div>
+                        <div class="item_show_price">
+                            <span>
+                                ￥39.90
+                                <img src="images/by_logo.png" alt="">
+                            </span>
+                            <div class="item_show_num">
+                                <span>1.5万+人付款</span>
+                            </div>
+                        </div>
+                        <div class="item_show_detail">
+                            <span>猫咪沐浴露SOS香波猫猫专用英短杀螨除菌沐浴液</span>
+                        </div>
+                        <div class="item_show_store">
+                            <span>乐乐猫宠物用品旗舰店</span>
+                            <span class="store_position"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-num">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a>
+                            <span aria-hidden="true">&laquo;上一页</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">6</a>
+                    </li>
+                    <li>
+                        <a href="#">7</a>
+                    </li>
+                    <li>
+                        <span id="ellipsis">...</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>下一页&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    
+    <!-- 脚注 -->
+    <footer class="footer">
+        <div class="clearfix"></div>
+        <div class="icon-row">
+            <div class="footer-icon">
+                <h5 class="footer-icon-child"></h5>
+                <span class="footer-icon-text">品类齐全，轻松购物</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-2"></h5>
+                <span class="footer-icon-text">多仓直发，极速配送</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-3"></h5>
+                <span class="footer-icon-text">正品行货，精致服务</span>
+            </div>
+            <div class="footer-icon">
+                <h5 class="footer-icon-child footer-icon-child-4"></h5>
+                <span class="footer-icon-text">天天低价，畅选无忧</span>
+            </div>
+        </div>
+        <div class="service-intro">
+            <div class="servece-type">
+                <div class="servece-type-info">
+                    <ul>
+                        <li>购物指南</li>
+                        <li>购物流程</li>
+                        <li>会员介绍</li>
+                        <li>生活旅行</li>
+                        <li>常见问题</li>
+                        <li>大家电</li>
+                        <li>联系客服</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>配送方式</li>
+                        <li>上门自提</li>
+                        <li>211限时达</li>
+                        <li>配送服务查询</li>
+                        <li>配送费收取标准</li>
+                        <li>海外配送</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>支付方式</li>
+                        <li>货到付款</li>
+                        <li>在线支付</li>
+                        <li>分期付款</li>
+                        <li>邮局汇款</li>
+                        <li>公司转账</li>
+                    </ul>
+                </div>
+                <div class="servece-type-info">
+                    <ul>
+                        <li>售后服务</li>
+                        <li>售后政策</li>
+                        <li>价格保护</li>
+                        <li>退款说明</li>
+                        <li>返修/退换货</li>
+                        <li>取消订单</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="friend-link"></div>
+            <div class="friend-link-item">
+                <ul>
+                    <li><span class="link-item">关于我们</span></li>
+                    <li><span class="link-item">联系我们</span></li>
+                    <li><span class="link-item">联系客服</span></li>
+                    <li><span class="link-item">合作招商</span></li>
+                    <li><span class="link-item">商家帮助</span></li>
+                    <li><span class="link-item">营销中心</span></li>
+                    <li><span class="link-item">销售联盟</span></li>
+                    <li><span class="link-item">校园社区</span></li>
+                    <li><span class="link-item">风险监测</span></li>
+                    <li><span class="link-item link-last-item">隐私政策</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copyright">
+            <p>Copyright © 2020 BY Husky</p>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
