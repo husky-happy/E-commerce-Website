@@ -5,4 +5,9 @@ $(function (){
     }).mouseleave(function () {
         $('.price_sequence ul').stop(true, false).slideUp(200);
     });
+    $('.item_show_info').click(function(){
+        window.location = 'Productdetails.html';
+    })
+    
 })
+

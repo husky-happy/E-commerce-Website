@@ -208,7 +208,7 @@ $(function () {
         var $documentScrollTop = $(document).scrollTop();
         if ($documentScrollTop >= 1200) {
             $('.sidebar_blocks').stop().animate({
-                "opacity": "10",
+                "opacity": "1",
                 "top": "20%"
             }, 200);
         } else if ($documentScrollTop < 1200) {
@@ -223,17 +223,19 @@ $(function () {
     var $head_nav_top = $head_nav_offset.offset().top;
     $(document).on('scroll', function () {
         var $documentScrollTop = $(document).scrollTop();
-        if($documentScrollTop > $head_nav_top) {
+        if ($documentScrollTop > $head_nav_top) {
             $head_nav_offset.css({
-                "position" : "fixed",
+                "position": "fixed",
                 "top": "-43px",
                 "z-index": 999,
                 "border-bottom": "2px solid #ff5500"
             });
-            $head_nav_offset.animate({"top": 0},0)
+            $head_nav_offset.animate({
+                "top": 0
+            }, 0)
         } else {
             $head_nav_offset.css({
-                "position" : "relative",
+                "position": "relative",
                 "top": "0",
                 "border-bottom": "none"
             });

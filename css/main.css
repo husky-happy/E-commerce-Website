@@ -32,6 +32,318 @@ a {
     color: #333;
 }
 
-input{
+input {
     outline: none;
+}
+
+/*侧边栏模块*/
+@media screen and (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    width: 36px;
+    height: 60%;
+    right: 0;
+    top: 20%;
+    background-color: #ff5500;
+    z-index: 1000;
+    min-height: 640px;
+    border-radius: 20px;
+}
+
+/*账号*/
+.sidebar .account {
+    width: 36px;
+    height: 70px;
+    position: absolute;
+    top: 15%;
+    font-size: 12px;
+}
+
+.sidebar .account:hover {
+    width: 36px;
+    height: 70px;
+    cursor: pointer;
+    background-color: #5745fd;
+}
+
+.sidebar .account>div>a {
+    position: absolute;
+    width: 36px;
+    color: #fff;
+    text-align: center;
+    bottom: 10px;
+}
+
+.sidebar .account>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+/*账号扩展侧边栏 -- 登录注册*/
+.account_extend {
+    position: absolute;
+    width: 280px;
+    height: 160px;
+    background-color: #fff;
+    left: -280px;
+    top: 15%;
+    box-shadow: -3px 3px 10px #999;
+}
+
+.account_extend>a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+}
+
+.account_extend>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+.account_extend>p {
+    text-align: center;
+}
+
+.account_extend>p>a {
+    color: #ff6600;
+}
+
+.account_extend>.close_account_extend {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/*购物车*/
+.sidebar .cart {
+    width: 36px;
+    height: 150px;
+    position: absolute;
+    top: 26%;
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .cart>p {
+    position: absolute;
+    width: 18px;
+    color: #fff;
+    text-align: center;
+    bottom: 40px;
+    left: 9px;
+}
+
+.sidebar .cart>p::after {
+    position: absolute;
+    content: '0';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #5754fd;
+    top: 65px;
+    left: 0;
+}
+
+.sidebar .cart>img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+
+/* 侧边栏购物车扩展 */
+.sidebar .cart_extend {
+    top: 40px;
+    right: 0;
+    width: 300px;
+    height: 50%;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: -1px -1px 5px #666;
+    z-index: 9999;
+}
+
+.cart_extend .title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 200;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.cart_extend .title span {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 40px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.cart_extend .content {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+}
+
+.cart_extend .content a {
+    color: #ff5500;
+}
+
+/* 收藏 */
+.sidebar .collection {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom: 44%;
+    font-size: 12px;
+}
+
+.sidebar .collection:hover {
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .collection>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 2;
+}
+
+.sidebar .collection>span,
+.sidebar .footprint>span,
+.sidebar .signIn>span,
+.sidebar .Consultation>span {
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-right: 0;
+    position: absolute;
+    right: 36px;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+    z-index: 1;
+    opacity: 0;
+    display: none;
+}
+
+/* 足迹 */
+.sidebar .footprint {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom: 36%;
+    font-size: 12px;
+}
+
+.sidebar .footprint:hover {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .footprint>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+/* 签到 */
+.sidebar .signIn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom: 28%;
+    font-size: 12px;
+}
+
+.sidebar .signIn:hover {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .signIn>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+/* 咨询 */
+.sidebar .Consultation {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom: 20%;
+    font-size: 12px;
+}
+
+.sidebar .Consultation:hover {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .Consultation>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+/* 返回顶部 */
+.sidebar .return_top {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    bottom: 12%;
+    font-size: 12px;
+}
+
+.sidebar .return_top:hover {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: #5754fd;
+}
+
+.sidebar .return_top>img {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
 }
